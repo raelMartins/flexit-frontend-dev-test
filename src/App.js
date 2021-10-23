@@ -22,7 +22,6 @@ function App() {
         method: 'GET',
         url: `https://api.unsplash.com/search/photos/?client_id=${apiKey}&query=${query}&orientation=portrait`
       });
-      console.log(res);
       const searchResults = res.data.results.map((el) => {
         return {
           name: el.user.first_name,
