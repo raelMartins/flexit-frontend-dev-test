@@ -161,6 +161,7 @@ section {
     .mobileFilters {
       display: flex;
       margin: 0px;
+      z-index: 3;
       @include tablet {
         display: none;
       }
