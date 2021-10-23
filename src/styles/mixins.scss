@@ -1,0 +1,56 @@
+@mixin phones {
+  @media screen and (max-width: 600px) {
+    @content;
+  }
+}
+
+@mixin largephone {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin container {
+  width: 80%;
+  min-height: 80vh;
+  background-color: white;
+  position: relative;
+  padding: 30px;
+  margin: auto;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  box-shadow: 6px 4px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+@mixin button {
+  background-color: $primaryColor;
+  padding: 8px 28px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  transition: 0.5s;
+  cursor: pointer;
+  font-size: 11px;
+  &:hover {
+    background-color: darken($primaryColor, $amount: 11);
+  }
+  &:focus {
+    outline: none;
+  }
+  &:disabled {
+    background-color: lighten($primaryColor, $amount: 99);
+    cursor: not-allowed;
+  }
+}

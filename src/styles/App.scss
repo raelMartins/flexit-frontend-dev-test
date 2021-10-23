@@ -1,3 +1,33 @@
+@import './variables.scss';
+@import './mixins.scss';
+
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: $backgroundColor;
+  min-height: 100vh;
+  .container {
+    background-color: $containerColor;
+    position: relative;
+    padding: 0px;
+    display: flex;
+    width: 90%;
+    max-width: 900px;
+    min-height: 70vh;
+    margin: auto;
+    box-shadow: 1px 20px 20px 16px rgba(0, 0, 0, 0.2);
+    .right {
+      width: 100%;
+    }
+    .menuIcon {
+      position: absolute;
+      top: 32px;
+      left: 16px;
+      cursor: pointer;
+      @include laptop {
+        display: none;
+      }
+    }
+  }
 }
