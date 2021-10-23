@@ -30,6 +30,7 @@ const TopSearch = ({ getSearch }) => {
         </div>
         <span className="notifications">
           <NotificationIcon />
+          <span className="notifNo">3</span>
           <div className="notificationsList">
             <ul>
               <li className="michael">
